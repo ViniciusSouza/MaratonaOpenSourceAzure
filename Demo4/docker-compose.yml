@@ -11,6 +11,9 @@ services:
       - "5000:80"
     depends_on: 
       - imageapi
+    links: 
+      - imageapi
+      
   imageapi:
     build: 
       context: ./webapi
